@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pablocastillo.controller.MenuDistribuidoresController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/FondoMenuDistribuidor.png" />
+         </image>
+      </ImageView>
+      <Text fill="#fafafa" fontSmoothingType="LCD" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Distribuidores" textAlignment="CENTER" wrappingWidth="386.4000053405762">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblDistribuidores" layoutX="14.0" layoutY="153.0" prefHeight="500.0" prefWidth="893.0">
+        <columns>
+          <TableColumn fx:id="colDistribuidorId" minWidth="60.0" prefWidth="112.7999849319458" text="distribuidorId" />
+          <TableColumn fx:id="colNombre" minWidth="140.0000457763672" prefWidth="140.0000457763672" text="nombre" />
+            <TableColumn fx:id="colDireccion" minWidth="140.0" prefWidth="175.0" text="direccion" />
+            <TableColumn fx:id="colNit" minWidth="102.39999389648438" prefWidth="111.20001220703125" text="NIT" />
+            <TableColumn fx:id="colTelefono" minWidth="145.5999755859375" prefWidth="145.5999755859375" text="Telefono" />
+            <TableColumn fx:id="colWeb" prefWidth="207.99996337890627" text="Web" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="925.0" layoutY="242.0" prefHeight="384.0" prefWidth="261.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="79.0" minHeight="55.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="55.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="55.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="84.0" minHeight="55.0" prefHeight="72.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="50.0" prefHeight="62.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Agregar">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Editar" GridPane.rowIndex="1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Eliminar" GridPane.rowIndex="2">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Reportes" GridPane.rowIndex="3">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Regresar" GridPane.rowIndex="4">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <TextField fx:id="tfDistribuidorId" layoutX="749.0" layoutY="84.0" prefHeight="35.0" prefWidth="217.0" promptText=" ingrese el id del distribuidor" />
+      <Button fx:id="btnBuscar" layoutX="979.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="36.0" text="Button" />
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="987.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/lupa.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

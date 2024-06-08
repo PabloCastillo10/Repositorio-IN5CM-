@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pablocastillo.controller.MenuCargosController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1200.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/FondoMenuCargos.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="957.0" layoutY="315.0" prefHeight="321.0" prefWidth="220.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="79.0" minHeight="55.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="55.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="55.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="84.0" minHeight="55.0" prefHeight="72.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Agregar">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Editar" GridPane.rowIndex="1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Eliminar" GridPane.rowIndex="2">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Regresar" GridPane.rowIndex="3">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblCargos" layoutX="214.0" layoutY="184.0" prefHeight="436.0" prefWidth="701.0">
+        <columns>
+          <TableColumn fx:id="colCargoId" prefWidth="75.0" text="cargoId" />
+          <TableColumn fx:id="colNombreCargo" prefWidth="164.00001525878906" text="Nombre del cargo" />
+            <TableColumn fx:id="colDescripcionCargo" minWidth="9.066680908203125" prefWidth="458.6666564941406" text="Descripcion del cargo" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfCargoId" layoutX="759.0" layoutY="94.0" prefHeight="35.0" prefWidth="199.0" promptText=" Ingrese el id del cargo" />
+      <Button fx:id="btnBuscar" layoutX="989.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="36.0" text="Button" />
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="997.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/lupa.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pablocastillo.controller.MenuEmpleadosController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1200.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/FondoMenuClientes.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="99.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Menu Empleados">
+         <font>
+            <Font size="51.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="907.0" layoutY="326.0" prefHeight="384.0" prefWidth="261.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="79.0" minHeight="55.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="55.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="55.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="84.0" minHeight="55.0" prefHeight="72.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="50.0" prefHeight="62.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Agregar">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Editar" GridPane.rowIndex="1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Eliminar" GridPane.rowIndex="2">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="Reportes" GridPane.rowIndex="3">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAsignarE" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="124.0" style="-fx-background-radius: 10;" text="AsignarE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <TextField fx:id="tfEmpleadoId" layoutX="749.0" layoutY="85.0" prefHeight="35.0" prefWidth="217.0" promptText="ingrese el id del empleado" />
+      <Button fx:id="btnBuscar" layoutX="979.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="36.0" text="Button" />
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="987.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/lupa.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblEmpleados" layoutX="56.0" layoutY="198.0" prefHeight="454.0" prefWidth="821.0">
+         <columns>
+            <TableColumn fx:id="colEmpleadoId" minWidth="100.0" text="EmpleadoId" />
+            <TableColumn fx:id="colNombreE" minWidth="120.0" text="Nombre" />
+            <TableColumn fx:id="colApellidoE" minWidth="100.0" text="Apellido" />
+            <TableColumn fx:id="colSueldo" minWidth="100.0" text="Sueldo" />
+            <TableColumn fx:id="colHoraEntrada" minWidth="100.0" text="Hora Entrada" />
+            <TableColumn fx:id="colHoraSalida" minWidth="100.0" text="Hora Salida" />
+            <TableColumn fx:id="colCargoId" minWidth="100.0" text="Cargo" />
+            <TableColumn fx:id="colEncargadoId" minWidth="100.0" text="Encargado" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnBack" layoutX="642.0" layoutY="683.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="187.0" style="-fx-background-radius: 10;" text="Regresar">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
