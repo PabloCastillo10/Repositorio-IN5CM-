@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pablocastillo.controller.MenuTicketSoporteController">
+   <children>
+      <ImageView fitHeight="753.0" fitWidth="1203.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/FondoMenuTicketSoporte.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfTicketId" editable="false" layoutX="48.0" layoutY="227.0" prefHeight="33.0" prefWidth="197.0" />
+      <TextArea fx:id="taDescripcion" layoutX="41.0" layoutY="324.0" prefHeight="144.0" prefWidth="254.0" wrapText="true" />
+      <ComboBox fx:id="cmbEstatus" layoutX="48.0" layoutY="571.0" prefHeight="27.0" prefWidth="198.0" />
+      <ComboBox fx:id="cmbFacturas" layoutX="788.0" layoutY="232.0" prefHeight="27.0" prefWidth="198.0" />
+      <ComboBox fx:id="cmbClientes" layoutX="440.0" layoutY="230.0" prefHeight="27.0" prefWidth="198.0" />
+      <TableView fx:id="tblTickets" layoutX="376.0" layoutY="309.0" onMouseClicked="#cargarForm" prefHeight="404.0" prefWidth="810.0">
+        <columns>
+          <TableColumn fx:id="colTicketId" prefWidth="75.0" text="Ticket Id" />
+          <TableColumn fx:id="colDescripcion" prefWidth="342.4000244140625" text="Descripcion" />
+            <TableColumn fx:id="colEstatus" minWidth="0.0" prefWidth="106.39990234375" text="Estatus" />
+            <TableColumn fx:id="colCliente" prefWidth="185.60009765625" text="Cliente" />
+            <TableColumn fx:id="colFacturaId" prefWidth="103.199951171875" text="Factura Id" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnGuardar" layoutX="48.0" layoutY="619.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="121.0" text="Guardar" />
+      <Button fx:id="btnVaciarForm" layoutX="201.0" layoutY="619.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="121.0" text="Vaciar Form" />
+      <Button fx:id="btnRegresar" layoutX="21.0" layoutY="713.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="20.0" prefWidth="100.0" text="Regresar" />
+   </children>
+</AnchorPane>
